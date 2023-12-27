@@ -1,0 +1,35 @@
+admin.py
+
+class CourseSyllabusImportExport(TransactionCommon, ImportExportModelAdmin):
+    resource_class = CourseSyllabusResource
+    list_display = ['course', 'syllabus', 'percentage','day']
+    list_filter = ("course",)
+    search_fields = ("course__course__startswith",)
+
+    form = CourseAdminForm
+
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        if db_field.name == "course":
+            kwargs["queryset"] = Course.objects.filter(isactive=True)
+        elif db_field.name == "syllabus":
+            kwargs["queryset"] = Syllabus.objects.filter(isactive=True)
+        elif db_field.name == "day":
+            #print("hai")
+            kwargs["queryset"] = MasterData.objects.filter(type="Day",isactive=True)
+
+        return super().formfield_for_foreignkey(db_field, request, **kwargs)
+
+models.py
+
+class CourseSyllabus(Transaction):
+    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    syllabus = models.ForeignKey(Syllabus, on_delete=models.CASCADE)
+    percentage = models.IntegerField()
+    changeinstudent = models.BooleanField(default=True,verbose_name="Change in Student Details")
+    day=models.ForeignKey(MasterData,on_delete=models.CASCADE)
+    class Meta:
+        verbose_name_plural = "Course Syllabus"
+        ordering = ['percentage']
+
+    def __str__(self):
+        return str(self.course) + " with syllabus " + str(self.syllabus)

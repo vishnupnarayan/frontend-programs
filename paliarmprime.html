@@ -1,0 +1,61 @@
+<html>
+<head>
+<script language="JavaScript">
+function prime()
+{
+	var n=parseInt(document.f.t.value);
+	var i=2;
+	while(i<n)
+	{
+		if(n%i==0)
+			break;
+		i++;
+	}
+	if(i==n)
+		alert(n+" is prime");
+	else
+		alert(n+" is composite");
+}
+function palindrome()
+{
+	var n=parseInt(document.f.t.value);
+	var rev=0,dig;
+	var temp=n;
+	while(n!=0)
+	{
+		dig=n%10;
+		rev=(rev*10)+dig;
+		n=(n-dig)/10;
+	}
+	if(temp==rev)
+		alert("Palindrome");
+	else
+		alert("Not a palindrome");
+}
+function amstrong()
+{	
+	var n=parseInt(document.f.t.value);
+	var sum=0,dig;
+	var temp=n;
+	while(n!=0)
+	{
+		dig=n%10;
+		sum=sum+(dig*dig*dig);
+		n=(n-dig)/10;
+	}
+	if(temp==sum)
+		alert("Amstrong");
+	else
+		alert("Not an amstrong")
+}
+</script>
+</head>
+<body>
+<form name="f">
+<input type="text" name="t"><br>
+<input type="button" name="b1" value="CHECK PRIME" onClick="prime()">
+<input type="button" name="b2" value="CHECK PALINDROME" onClick="palindrome()">
+<input type="button" name="b3" value="CHECK ANSTRONG" onClick="amstrong()">
+</form>
+</body>
+</html>

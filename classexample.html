@@ -1,0 +1,27 @@
+<html>
+<body>
+
+<script>
+class Car {
+  constructor(n, y) {
+    this.name = n;
+    this.year = y;
+
+  }
+  age() {
+    let d = new Date();
+    return d.getFullYear() - this.year;
+  }
+}
+
+let myCar = new Car("Ford", 2014);
+
+document.write("My car is " + myCar.age() + " years old.");
+
+let myCar1 = new Car("Maruti", 2010);
+
+document.write("My car is " + myCar1.age() + " years old.");
+</script>
+
+</body>
+</html>

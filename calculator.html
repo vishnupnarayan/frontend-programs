@@ -1,0 +1,43 @@
+<html>
+<head>
+<script language="JavaScript">
+function add()
+{
+	var no1=parseInt(document.f.t1.value);
+	var no2=parseInt(document.f.t2.value);
+	var res=no1+no2;
+	window.alert("Sum is "+res);
+}
+function sub()
+{
+	var no1=parseInt(document.f.t1.value);
+	var no2=parseInt(document.f.t2.value);
+	var res=no1-no2;
+	window.alert("Difference is "+res);
+}
+function mul()
+{
+	var no1=parseInt(document.f.t1.value);
+	var no2=parseInt(document.f.t2.value);
+	var res=no1*no2;
+	window.alert("Product is "+res);
+}
+function div()
+{
+	var no1=parseInt(document.f.t1.value);
+	var no2=parseInt(document.f.t2.value);
+	var res=no1/no2;
+	window.alert("Quotient is "+res);
+}
+</script>
+</head>
+<body>
+<form name="f">
+	<pre>
+	Enter first number : <input type="text" name="t1">
+	Enter second number : <input type="text" name="t2">
+	<input type="Button" value="ADD" onclick="add()">  <input type="Button" value="SUB" onclick="sub()">  <input type="Button" value="MUL" onclick="mul()">  <input type="Button" value="DIV" onclick="div()">
+</pre>
+</form>
+</body>
+</html>

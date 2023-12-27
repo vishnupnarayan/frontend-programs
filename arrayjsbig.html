@@ -1,0 +1,21 @@
+<html>
+<body>
+<script language="Javascript">
+n=parseInt(prompt("Enter number of elements : "));
+const a=[];
+for(i=0;i<n;i++)
+{
+	a[i]=parseInt(prompt("Enter an elements: "));
+}
+var big=a[0];
+for(i=1;i<n;i++)
+{
+	if(a[i]>big)
+	{
+		big=a[i];
+	}
+}
+document.write("Big is : "+big);
+</script>
+</body>
+</html>

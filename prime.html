@@ -1,0 +1,29 @@
+<html>
+<body>
+<script language="JavaScript">
+	var num=parseInt(prompt("Enter a number : "));
+	var i;
+	if(num==1)
+		document.write("Neither Prime nor composite");
+	else
+	{
+		for(i=2;i<num;i++)
+		{
+			if(num%i==0)
+			{
+			break;
+			}
+		} 
+		if(i==num)
+		{
+		alert("Prime!!!!");
+		}
+		else
+		{
+		alert("Composite!!!!");
+		}
+	}
+</script>
+</body>
+</html>
+

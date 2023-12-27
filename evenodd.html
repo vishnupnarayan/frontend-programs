@@ -1,0 +1,26 @@
+<html>
+<head>
+<script language="JavaScript">
+function check()
+{
+	var no=parseInt(document.f.t1.value);
+	if(no%2==0)
+	{
+		window.alert("Even");
+	}
+	else
+	{
+		window.alert("Odd");
+	}
+}
+</script>
+</head>
+<body>
+<form name="f">
+	<pre>
+	Enter a number : <input type="text" name="t1">
+	<input type="Button" value="Check" onclick="check()">
+</pre>
+</form>
+</body>
+</html>

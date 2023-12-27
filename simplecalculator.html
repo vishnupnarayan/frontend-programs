@@ -1,0 +1,50 @@
+<html>
+<head>
+<script language="JavaScript">
+function add()
+{
+	var no1=parseInt(document.f.t1.value);
+	var no2=parseInt(document.f.t2.value);
+	var s=no1+no2;
+	document.f.t3.value=s;
+}
+function sub()
+{
+	var no1=parseInt(document.f.t1.value);
+	var no2=parseInt(document.f.t2.value);
+	var s=no1-no2;
+	document.f.t3.value=s;
+}
+function mul()
+{
+	var no1=parseInt(document.f.t1.value);
+	var no2=parseInt(document.f.t2.value);
+	var s=no1*no2;
+	document.f.t3.value=s;
+}
+function div()
+{
+	var no1=parseInt(document.f.t1.value);
+	var no2=parseInt(document.f.t2.value);
+	var s=no1/no2;
+	document.f.t3.value=s;
+}
+</script>
+</head>
+<body>
+<form name="f">
+	<pre>
+	Enter first number  : <input type="text" name="t1">
+
+
+	Enter second number : <input type="text" name="t2">
+
+	<input type="Button" value="ADD" onclick="add()">  	<input type="Button" value="SUBTRACT" onclick="sub()">	<input type="Button" value="MULTIPLY" onclick="mul()">	<input type="Button" value="DIVIDE" onclick="div()">
+
+
+
+	Result              : <input type="text" name="t3">
+</pre>
+</form>
+</body>
+</html>

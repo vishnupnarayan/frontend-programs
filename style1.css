@@ -1,0 +1,16 @@
+body{
+  background-color: red;
+}
+h1{
+  color: white;
+  margin-left: 20px;
+}
+p{
+color:yellow;
+}
+.alpha{
+color:blue;
+}
+#beta{
+color:aqua;
+}

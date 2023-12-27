@@ -1,0 +1,39 @@
+<html>
+<body>
+<script language="Javascript">
+n=parseInt(prompt("Enter number of elements : "));
+const a=[];
+for(i=0;i<n;i++)
+{
+	a[i]=parseInt(prompt("Enter an elements: "));
+}
+var key=parseInt(prompt("Enter the key to search : "));
+var l=0;
+var u=n-1;
+var mid;
+while(l<=u)
+{
+	mid=parseInt((l+u)/2);
+	if(a[mid]==key)
+	{
+		alert(key+"found at "+mid+" index");
+		break;
+	}
+	else if(a[mid]<key)
+	{
+		l=mid+1;
+	}
+	else
+	{
+		u=mid-1;
+	}
+}
+if(l>u)
+{
+	alert(key+"not in the array");
+}
+</script>
+</body>
+</html>
+
+

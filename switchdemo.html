@@ -1,0 +1,44 @@
+<html>
+<head>
+<script language="JavaScript">
+function check()
+{
+	var no=parseInt(document.f.t1.value);
+	switch(no)
+	{
+		case 1:
+			window.alert("Sunday");
+			break;
+		case 2:
+			window.alert("Monday");
+			break;
+		case 3:
+			window.alert("Tuesday");
+			break;
+		case 4:
+			window.alert("Wednesday");
+			break;
+		case 5:
+			window.alert("Thursday");
+			break;
+		case 6:
+			window.alert("Friday");
+			break;
+		case 7:
+			window.alert("Saturday");
+			break;
+		default:
+			window.alert("Invalid number ")
+	}
+}
+</script>
+</head>
+<body>
+<form name="f">
+	<pre>
+	Enter a number : <input type="text" name="t1">
+	<input type="Button" value="Check" onclick="check()">
+</pre>
+</form>
+</body>
+</html>

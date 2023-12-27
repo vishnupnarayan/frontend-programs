@@ -1,0 +1,69 @@
+<html>
+<head>
+<script language="JavaScript">
+var username="";
+function validate_email() {
+	var x=document.f1.email.value;
+	if (x=="") {
+    		alert("Email must be filled out");
+ 	}
+	else
+	{
+		var l=x.length;
+		var i;
+		var flag=0;
+		for(i=0;i<l;i++)
+		{
+			if(x.charAt(i)=='@')
+			{
+				flag=1;
+				break;
+			}
+		}
+		if(flag==0)
+		{
+			alert("Invalid emailid");
+			document.f1.email.value="";
+		}
+	}
+
+}
+function validate_password() {
+	validate_email();
+	var y=document.f1.pswd.value;
+	if (y=="") {
+    		alert("Password must be filled out");
+ 	}
+	else
+	{
+		var l=y.length;
+		if(l<8)
+		{
+			alert("Password should be atleast 8 characters long");
+		}
+		else
+		{
+			var x=document.f1.email.value;
+			var i=0;
+			while(x[i]!='@')
+			{
+				username=username+x.charAt(i);
+				i++;
+			}
+			alert("Welcome "+username);
+		}
+	}
+
+}
+		
+</script>
+</head>
+<body>
+<form name="f1">
+ 	 Emailid: <input type="text" name="email"><br><br>
+	Password: <input type="password" name="pswd" onclick="validate_email()"><br><br>
+  <input type="Button" value="Login" onClick="validate_password()">
+</form>
+
+</body>
+</html>

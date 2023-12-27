@@ -1,0 +1,37 @@
+<html>
+<head>
+<script language="JavaScript">
+function Calculate()
+{
+	var u=parseInt(document.f.t1.value);
+	var charge;
+	if(u<=100)
+	{
+		charge=u*0.5;
+	}
+	else if(u<=150)
+	{
+		charge=(100*0.5)+(u-100)*0.75;
+	}
+	else if(u<=200)
+	{
+		charge=(100*0.5)+(50*0.75)+(u-150)*1;
+	}
+	else
+	{
+		charge=(100*0.5)+(50*0.75)+(50*1)+(u-200)*2;
+	}
+	document.f.t2.value=charge;
+}
+</script>
+</head>
+<body>
+<form name="f">
+	<pre>
+	Units consumed : <input type="text" name="t1">
+	<input type="Button" value="Calculate" onclick="Calculate()">	
+	Monthly Tarriff : <input type="text" name="t2">
+</pre>
+</form>
+</body>
+</html>

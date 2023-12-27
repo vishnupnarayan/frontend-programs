@@ -1,0 +1,48 @@
+
+<html>
+<head>
+<title>Welcome To My Domain</title>
+</head>
+<body onload="document.registration.userid.focus();">
+<h1>User Login Form</h1>
+<form name='sample' onSubmit="return demo();">
+<ul>
+<label for="userid">Userid:</label>
+<input type="text" name="userid" size="10"/><br/></br>
+<label for="passid">Password:</label>
+<input type="password" name="passid" size="10"/><br/><br/>
+<input type="submit" name="submit" value="Submit"/>
+</ul>
+</form>
+<script>
+function demo()
+{
+var uid = document.sample.userid;
+var passid = document.sample.passid;
+return false;
+} 
+function userid_validation(uid,x,y)
+{
+var uid_len = uid.value.length;
+if (uid_len == 0 || uid_len>= y || uid_len< x)
+{
+alert("User Id should not be empty it must contains length be between "+x+" to "+y);
+uid.focus();
+return false;
+}
+return true;
+}
+function passid_validation(passid,x,y)
+{
+varpassid_len = passid.value.length;
+if (passid_len == 0 || passid_len>= y || passid_len< x)
+{
+alert("Password should not be empty it must been length  between "+x+" to "+y);
+passid.focus();
+return false;
+}
+return true;
+}
+</script>
+</body>
+</html>

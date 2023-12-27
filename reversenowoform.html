@@ -1,0 +1,15 @@
+<html>
+<body>
+<script language="JavaScript">
+	var num=parseInt(prompt("Enter a number :"));
+	var rev=0,dig;
+	while(num!=0)
+	{
+		dig=num%10;
+		rev=(rev*10)+dig;
+		num=(num-dig)/10;
+	}
+	alert("Reverse is "+rev);
+</script>
+</body>
+</html>

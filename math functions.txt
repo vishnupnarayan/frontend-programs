@@ -1,0 +1,9 @@
+math.sqrt(25)=>5.0
+math.abs(-25)=>25
+math.min(10,20,6,78)=>6
+math.max(10,20,6,78)=>78
+math.pow(2,5)=>32
+math.floor(10.89)=>10
+math.ceil(10.25)=>11
+math.round(10.25)=>10
+math.random()

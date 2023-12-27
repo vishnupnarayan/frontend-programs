@@ -1,0 +1,22 @@
+<html>
+<body>
+<script language="Javascript">
+var word=prompt("Enter a string");
+var l=word.length;
+for(i=0,j=l-1;i<int(l/2);i++,j--)
+{
+	if(word[i]!=word[j])
+		break;	
+}
+if(i==j || i==j+1)
+{
+	alert("Palindrome");
+}
+else
+{
+	alert("Not a palindrome");
+}
+</script>
+</body>
+</html>
+

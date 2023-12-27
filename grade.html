@@ -1,0 +1,53 @@
+<html>
+<head>
+<script language="JavaScript">
+function check()
+{
+	var p=parseInt(document.f.t1.value);
+	var c=parseInt(document.f.t2.value);
+	var m=parseInt(document.f.t3.value);
+	if(p>=50&&c>=50&&m>=50)
+	{
+		var per=(p+c+m)/3;
+		if(per>=90)
+		{
+			alert("Grade=A+");
+		}
+		else if (per<90&&per>=80)
+		{
+			alert("Grade= A");
+		}
+		else if (per<80&&per>=70)
+		{
+			alert("Grade= B+");
+		}
+		else if (per<70&&per>=60)
+		{
+			alert("Grade= B");
+		}
+		else
+		{
+			alert("Grade=C");
+		}
+	}
+	else
+	{
+		alert("Failed......")
+	}
+}
+</script>
+</head>
+<body>
+<form name="f">
+	<pre>
+	Enter the marks for physics :     <input type="text" name="t1">
+
+	Enter the marks for chemistry :   <input type="text" name="t2">
+
+	Enter the marks for mathematics : <input type="text" name="t3">
+
+	<input type="Button" value="Check" onClick="check()">
+</pre>
+</form>
+</body>
+</html>

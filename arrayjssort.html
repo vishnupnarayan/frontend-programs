@@ -1,0 +1,35 @@
+<html>
+<body>
+<script language="Javascript">
+n=parseInt(prompt("Enter number of elements : "))
+const a=[];
+for(i=0;i<n;i++)
+{
+	a[i]=parseInt(prompt("Enter an elements: "));
+}
+document.write("Array before sorting<br>")
+for(i=0;i<n;i++)
+{
+	document.write(a[i]+"<br>");
+}
+var temp;
+for(i=0;i<n-1;i++)
+{
+	for(j=i+1;j<n;j++)
+	{
+		if(a[i]>a[j])
+		{
+			temp=a[i];
+			a[i]=a[j];
+			a[j]=temp;
+		}
+	}
+}
+document.write("Sorted Array<br>")
+for(i=0;i<n;i++)
+{
+	document.write(a[i]+"<br>");
+}
+</script>
+</body>
+</html>

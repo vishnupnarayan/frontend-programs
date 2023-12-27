@@ -1,0 +1,42 @@
+<html>
+<head>
+<script language="JavaScript">
+function check()
+{
+	var l=parseInt(document.f.t1.value);
+	var u=parseInt(document.f.t2.value);
+	var j;
+	for(;l<=u;l++)
+	{
+		for(j=2;j<l;j++)
+		{
+			if(l%j==0)
+				break;
+		}
+		if(j==l)
+		{
+			document.write(j);
+			document.write("<br>");
+		}
+	}
+}
+</script>
+</head>
+<body>
+<form name="f">
+	<pre>
+	Enter the lower limit : <input type="text" name="t1">
+	Enter the upper limit : <input type="text" name="t2">
+
+	<input type="Button" value="Print" onClick="check()">
+</pre>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+

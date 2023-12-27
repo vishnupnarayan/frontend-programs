@@ -1,0 +1,32 @@
+<html>
+<body>
+<script language="JavaScript">
+	var l=parseInt(prompt("Enter the lower limit :"));
+	var u=parseInt(prompt("Enter the upper limit :"));
+	var j;
+	for(;l<=u;l++)
+	{
+		for(j=2;j<l;j++)
+		{
+			if(l%j==0)
+				break;
+		}
+		if(j==l)
+		{
+			document.write(j);
+			document.write("<br>");
+		}
+	}
+}
+</script>
+</body>
+</html>
+l=5
+u=10
+
+
+
+
+
+
+

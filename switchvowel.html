@@ -1,0 +1,35 @@
+<html>
+<head>
+<script language="JavaScript">
+function check()
+{
+	var letter=(document.f.t1.value).charAt(0);
+	switch(letter)
+	{
+		case 'a':
+		case 'e':
+		case 'i':
+		case 'o':
+		case 'u':
+		case 'A':
+		case 'E':
+		case 'I':
+		case 'O':
+		case 'U':
+			window.alert("Vowel");
+			break;
+		default:
+			window.alert("Consonent");
+	}
+}
+</script>
+</head>
+<body>
+<form name="f">
+	<pre>
+	Enter an alphabet : <input type="text" name="t1">
+	<input type="Button" value="Check" onclick="check()">
+</pre>
+</form>
+</body>
+</html>

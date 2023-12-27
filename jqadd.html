@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#add").click(function(){
+    $("#no3").val("Sum: "+ (parseInt($("#no1").val())+parseInt($("#no2").val())));
+  });
+$("#sub").click(function(){
+    $("#no3").val("Difference: "+ (parseInt($("#no1").val())-parseInt($("#no2").val())));
+  });
+});
+</script>
+</head>
+<body>
+
+<p>First Number: <input type="text" id="no1"><br>
+Second Number: <input type="text" id="no2"></p>
+
+Result:<input type="text" id="no3"><br>
+<button id="add">ADD</button>
+<button id="sub">SUBTRACT</button>
+
+</body>
+</html>

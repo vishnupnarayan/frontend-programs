@@ -1,0 +1,26 @@
+<html>
+<body>
+<script language="JavaScript">
+	var l=parseInt(prompt("Enter the lower limit : "));
+	var u=parseInt(prompt("Enter the upper limit : "));
+	var temp,len,d,s,dummy;
+	for(;u<=l;u++)
+	{
+		temp=u;
+		dummy=str(temp);
+		len=dummy.length;
+		s=0;
+		while(u!=0)
+		{
+			d=u%10;
+			s=s+Math.pow(d,len);
+			u=(u-d)/10;
+		}
+		if(temp==s)
+		{
+			document.write(temp);
+		}
+	} 
+</script>
+</body>
+</html>

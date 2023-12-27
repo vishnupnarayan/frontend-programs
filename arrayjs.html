@@ -1,0 +1,22 @@
+<html>
+<body>
+<script language="Javascript">
+n=parseInt(prompt("Enter number of elements : "));
+const a=[];
+for(i=0;i<n;i++)
+{
+	a[i]=parseInt(prompt("Enter an elements: "));
+}
+for(i=0,j=n-1;i<parseInt(n/2);i++,j--)
+{
+	t=a[i];
+	a[i]=a[j];
+	a[j]=t;
+}
+for(i=0;i<n;i++)
+{
+	document.write(a[i]+"<br>");
+}
+</script>
+</body>
+</html>

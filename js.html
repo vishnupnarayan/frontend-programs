@@ -1,0 +1,24 @@
+<html>
+<head>
+<script language="JavaScript">
+function add()
+{
+	var a=parseInt(document.f1.t1.value);
+	var b=parseInt(document.f1.t2.value);
+	var c=a+b;
+	//document.write("<body bgcolor='yellow'><h1>"+c+"</h1></body>");
+	//alert("The sum "+c)
+document.f1.t3.value=c;
+
+}
+</script>
+</head>
+<body>
+<form name="f1">
+Enter first number:	<input type="text" name="t1"><br>
+Enter second number:<input type="text" name="t2"><br>
+The result is :<input type="text" name="t3"><br>
+	<input type="button" name="b1" value="ADD" onclick="add()">
+</form>
+</body>
+</html> 
